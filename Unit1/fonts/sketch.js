@@ -1,15 +1,16 @@
-let f1, f2 ;
+let f1;
+let f2;
 
 function setup() {
   createCanvas(500, 500);
   textAlign(CENTER)
 
   f1 = loadFont("assets/Myrlissa.otf");
-  f2 = loadFont("assets/Winter.ttf")
+  f2 = loadFont("assets/Winter.ttf");
 }
 
 function draw() {
-background(100);
+  background(100);
 textSize (48);
 
 textFont(f1);

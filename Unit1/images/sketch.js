@@ -9,7 +9,7 @@ function setup() {
   pizza = loadImage("assets/pizza.jpg");
 
   imageMode(CENTER);
-  rectMode(CENTER);
+  rectMode(CENTER); 
   textAlign(CENTER);
 }
 

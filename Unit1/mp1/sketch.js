@@ -1,3 +1,5 @@
+
+
 function setup() {
 // Sets the screen to be 720 pixels wide and 400 pixels high
 createCanvas(720, 400);
@@ -122,6 +124,12 @@ rect(0, 248, 720, 100);
     square(320, 230, 12);
 
 
+      //ax
+    fill('gray');
+    rect(355, 295, 40, 6);
+     fill('black');
+    rect(390, 288, 6, 20);
+
     //arms
      fill('green');
      rect(240, 230, 10, 55);
@@ -152,12 +160,16 @@ rect(0, 248, 720, 100);
  fill('green');
  ellipse(70, 144, 50, 80);
 
-
-
-
          //ground
        fill('DarkOliveGreen');
        rect(0, 337, 720, 80);
+
+
+
+       textSize(13)
+       fill('black');
+       text("Mr. Monster doodle.\nHe is quiet and cute. He's a night person. Then he turns day into night in the blink of an eye. His ax can open the ground to find lights.", 20, 350, 400, 200);
+
 
 
 
@@ -166,9 +178,13 @@ rect(0, 248, 720, 100);
       fill('white')
       ellipse(600, 50, 150, 150);
 
+
       //ground buildings
       fill('DarkOliveGreen');
       rect(0, 248, 720, 100);
+
+
+
 
 
       //building1
@@ -271,6 +287,21 @@ rect(0, 248, 720, 100);
         square(320, 230, 12);
 
 
+        //tongue
+        fill('red')
+        ellipse(300, 262, 40, 15);
+
+
+        //ax night
+        fill('black');
+        rect(355, 295, 6, 40);
+
+         fill('gray');
+         rect(350, 332, 20, 6);
+
+
+
+
         //arms
          fill('green');
          rect(240, 230, 10, 55);
@@ -294,14 +325,21 @@ rect(0, 248, 720, 100);
           rect(320, 285, 10, 55);
 
 
-                   //ground
-                 fill('DarkOliveGreen');
-                 rect(0, 337, 720, 80);
 
+          //brokeground
+             fill('brown');
+             rect(380, 335, 20, 2);
+              fill('brown');
+             rect(398, 335, 2, 30);
+           fill('brown');
+             rect(400, 363, 50, 2);
+             fill('brown');
+             circle(450, 365, 60);
+             fill('black');
+             circle(455, 365, 40);
 
+              fill('yellow');
+             circle(458, 365, 40);
+}
 
-
-
-      }
-
-  }
+}

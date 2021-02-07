@@ -7,20 +7,19 @@ function preload() {
 
 function setup() {
   createCanvas(500, 500) ;
-  song1.play() ;
+
 }
 
 function draw() {
-background ('green');
+background(100) ;
+
 }
 
 function mouseReleased() {
-if (song1.isPlaying()) {
+if (song1.isPlaying()){
   song1.pause();
-
-}
-else {
-  song1.loop()
+} else {
+  song1.loop();
   }
 }
 

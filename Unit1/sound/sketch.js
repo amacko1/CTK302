@@ -11,7 +11,7 @@ function setup() {
 }
 
 function draw() {
-backgroung('green');
+background ('green');
 }
 
 function mouseReleased() {

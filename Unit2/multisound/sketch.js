@@ -4,7 +4,7 @@ let song1, song2, song3;
 function preload() {
   song1 = loadSound("assets/sound1.mp3");
   song2 = loadSound("assets/sound2.mp3");
-  song3 = loadSound("assets/ukulele1.mp3");
+  song3 = loadSound("assets/ukulele.mp3");
 
   song1.loop();
   song1.pause();
@@ -12,15 +12,12 @@ function preload() {
   song2.pause();
   song3.loop();
   song3.pause();
-
 }
 
 function setup() {
   createCanvas(400, 400);
 
-
 }
-
 
 function draw() {
 
@@ -33,7 +30,7 @@ function draw() {
       break;
 
     case 1:
-      text("listen to song 1", 100, 100);
+      text("list to song 1", 100, 100);
       break;
 
     case 2:
@@ -43,7 +40,7 @@ function draw() {
       break;
 
     case 3:
-      text("listen to song 2", 100, 100);
+      text("list to song 2", 100, 100);
       break;
 
     case 4:
@@ -52,11 +49,9 @@ function draw() {
       state = 5;
       break;
 
-
     case 5:
-      text("listen to song 3", 100, 100);
+      text("list to song 3", 100, 100);
       break;
-
 
   }
 }
@@ -66,10 +61,6 @@ function mouseReleased() {
   song2.pause();
   song3.pause();
 
-
   state++;
   if (state > 5) state = 0;
-
-
-
 }

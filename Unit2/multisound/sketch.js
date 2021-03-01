@@ -50,7 +50,7 @@ function draw() {
       break;
 
     case 5:
-      text("list to song 3", 100, 100);
+      text("listing to song 3", 100, 100);
       break;
 
   }

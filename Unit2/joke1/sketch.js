@@ -14,7 +14,8 @@ function draw() {
     break ;
 
     case 1:
-    background('green') ;
+    background('white') ;
+    fill('red')
     text("I don’t know,\nbut the flag\nis a big plus.:D", width/2, height/2) ;
     break ;
 

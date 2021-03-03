@@ -117,8 +117,9 @@ function snow1() {
   line(180, 375, 100, 350);
   line(320, 375, 400, 350);
   strokeWeight(0);
-  fill('black')
-  text("The snowman on a snowy day. \nPlease Click! ", 300, 100);
+  fill('white');
+  text("The snowman on a snowy day. \nPlease Click! ", 300, 200);
+  textSize(14);
 }
 
 function snowsun() {
@@ -151,8 +152,9 @@ function snowsun() {
   line(180, 375, 100, 350);
   line(320, 375, 400, 350);
   strokeWeight(0);
-  fill('black')
-  text("but the sun came up", 300, 100);
+  fill('white')
+  text("but the sun \ncame up...", 300, 100);
+  textSize(16);
 
   //sun
   fill('yellow');
@@ -190,8 +192,9 @@ function snowmelt() {
   line(180, 500, 50, 500);
   line(320, 510, 400, 500);
   strokeWeight(0);
-  fill('black')
-  text("BYE BYE snowman!!!!", 300, 100);
+  fill('white')
+  text("BYE BYE snowman!!!!", 270, 100);
+  textSize(20);
 
   //sun
   fill('yellow');

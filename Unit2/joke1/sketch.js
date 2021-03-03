@@ -10,6 +10,7 @@ function draw() {
   switch(state){
     case 0:
     background('red') ;
+    fill('white')
     text("What’s the best thing\nabout Switzerland?", width/2, height/2) ;
     break ;
 

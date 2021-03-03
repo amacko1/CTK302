@@ -119,7 +119,7 @@ function snow1() {
   strokeWeight(0);
   fill('white');
   text("The snowman on a snowy day. \nPlease Click! ", 300, 200);
-  textSize(14);
+  textSize(16);
 }
 
 function snowsun() {

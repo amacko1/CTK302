@@ -118,7 +118,7 @@ function snow1() {
   line(320, 375, 400, 350);
   strokeWeight(0);
   fill('white');
-  text("The snowman on a snowy day. \nPlease Click! ", 300, 200);
+  text("The SNOWMAN on a \nSNOWY DAY. \nPlease Click! ", 320, 200);
   textSize(16);
 }
 

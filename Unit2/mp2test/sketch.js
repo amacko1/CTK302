@@ -31,12 +31,12 @@ print(state);
       break;
 
     case 1:
-      myTimer++;
-      if (myTimer > 7 * 60) {
-        myTimer = 0;
-        song1.pause();
-        state = 2;
-      }
+      // myTimer++;
+      // if (myTimer > 7 * 60) {
+      //   myTimer = 0;
+      //   song1.pause();
+      //   state = 2;
+      // }
 
       snow1();
       break;
@@ -53,6 +53,7 @@ print(state);
         myTimer = 0;
         state = 4;
         song1.pause();
+        song2.play();
       }
 
       snowsun();
@@ -117,7 +118,7 @@ function snow1() {
   line(320, 375, 400, 350);
   strokeWeight(0);
   fill('black')
-  text("The snowman on a snowy day ", 300, 100);
+  text("The snowman on a snowy day. \nPlease Click! ", 300, 100);
 }
 
 function snowsun() {
@@ -196,4 +197,9 @@ function snowmelt() {
   fill('yellow');
   ellipse(56, -10, 400, 400);
 
+}
+
+
+function touchStarted() {
+  getAudioContext().resume();
 }

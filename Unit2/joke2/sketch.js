@@ -10,13 +10,15 @@ function setup() {
 function draw() {
   switch(state){
     case 0:
-    background('grey') ;
-    text("why did the chicken\ncross the road?", width/2, height/2) ;
+    background('black') ;
+    fill('yellow');
+    text("Why don’t scientists \ntrust atoms?", width/2, height/2) ;
     break ;
 
     case 1:
-    background('yellow') ;
-    text("to get to the other side", width / 2, height / 2) ;
+    background('red') ;
+    fill('yellow');
+    text("Because they \nmake up everything.", width / 2, height / 2) ;
     break ;
 
   }

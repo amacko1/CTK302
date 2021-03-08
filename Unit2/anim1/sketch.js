@@ -5,14 +5,16 @@ function setup() {
 }
 
 function draw() {
-  background(100) ;
-  //rect(x, 100, 100, 100) ;
+  background(0) ;
+  // rect(x, 200, 200, 200) ;
   textSize(48);
-  text("Hulk running in 2D", x, height/2) ;
+  fill('green')
+  text("Hulk", x, height/2);
+
+
   x = x + 10;
 
-
-
-  if (x > width) }
-x = 0;
+  if (x > width) {
+    x = -200;
+  }
 }

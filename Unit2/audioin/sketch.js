@@ -28,7 +28,7 @@ function draw() {
 
   // extra stuff for debugging
   textSize(18);
-  text("Click the screen first to give\npermission for mic input.\nMy volume is " + vol, 10, 60);
+  text("Click the screen first to give\npermission for mic input.\nMy volume is " + vol, 10, 40);
 
   rect(vol * 100, 100, 50, 50);
   rect(vol * 300, 150, 50, 50);

@@ -1,6 +1,6 @@
 var mic;
 var vol;
-var c = 'green';
+var c = 'yellow';
 let x = 0 ;
 
 function setup() {
@@ -32,7 +32,7 @@ if (x > width) {
 
   // extra stuff for debugging
   textSize(18);
-  text("Click the screen first to give\npermission for mic input.\nMy volume is " + vol, 10, 60);
+  text("Click the screen first to give\npermission for mic input.\nMy volume is " + vol, 10, 40);
 
 
 }

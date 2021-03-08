@@ -25,7 +25,7 @@ switch(state){
 
   case 0:
   background(100) ;
-  text("shhhhh!!!!", width/2, height/2) ;
+  text("SHHHHHHH!!!", width/2, height/2) ;
     if (vol > .08) {
       state = 1;
     }

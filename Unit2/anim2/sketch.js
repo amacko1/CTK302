@@ -5,12 +5,18 @@ function setup() {
 }
 
 function draw() {
-  background(100) ;
+  background('black') ;
 
   push() ;
   translate(x, 0) ;
-  rect(100, 100, 100, 100) ;
-  //avatar!!!
+  fill('yellow');
+  circle(250, 250, 200);
+  fill('white');
+  circle(280, 250, 10);
+  fill('white');
+  circle(240, 250, 10);
+
+
   pop() ;
 
   x = x + 10 ;

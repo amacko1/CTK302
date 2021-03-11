@@ -18,16 +18,16 @@ function draw() {
 	text("case 1", 250, 250);
 	break;
 case 2:
-	background('red');
+	background('pink');
 	text("case 2", 250, 250);
 	break;
 }
 
-rect (100, 100, 100, 50) ;
+rect (width/2-50, height-100, 100, 50) ;
 }
 
 function mouseReleased(){
-  if ((mouseX > 100) &&  (mouseX < 200) && (mouseY > 100) && (mouseY < 200) ) {
+  if ((mouseX > width/2-50) &&  (mouseX < width/2 + 100) && (mouseY > height-100) && (mouseY < height-100 + 50) ) {
   state++ ;
   if (state > 2){
     state = 0 ;

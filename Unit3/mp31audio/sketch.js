@@ -4,7 +4,7 @@ let maxTimer = 5 * 60;
 let timer = 0;
 let frogPos;
 let img, img1, img2, img3, img4;
-let state = 0;
+let state = -1;
 let song1, song2;
 
 function preload() {
@@ -40,6 +40,18 @@ function setup() {
 function draw() {
 
   switch (state) {
+    //case -2:
+    //background('white');
+    //text('Click', 80, 400);
+    //break;
+
+
+    case -1:
+    song1.play() ;
+    song2.pause() ;
+    state = 0;
+    break;
+
     case 0:
       image(img1, 0, 0, 500, 500);
       image(img4, 0, 0, 500, 500);
@@ -55,8 +67,6 @@ function draw() {
         timer = 0;
         state = 3; //lose state
       }
-
-
       break;
 
     case 2: //win
@@ -81,31 +91,40 @@ function draw() {
 
 function mouseReleased() {
   switch (state) {
-    case 0:
-      state = 1;
+    case -1:
+    state = 0;
+    song1.play();
+    song2.pause();
 
-      song1.play();
-      song1.loop();
-      state = 1;
+    break;
+
+
+    case 0:
+    state = 1;
+    song1.pause();
+    song2.loop();
+    state = 1;
       break;
 
     case 1:
     state = 2;
     song1.pause();
-    song2.play();
+    song2.loop();
     state = 2;
     break;
 
     case 2: //they won and clocked to restart
       resetTheGame();
-      state = 0;
-
+      song2.pause();
+      song1.loop();
+      state = -1;
       break;
 
     case 3: //they lost clicked to restart
       resetTheGame();
       state = 0;
-
+      song2.pause();
+      song1.loop();
       break;
   }
 
@@ -122,6 +141,7 @@ function resetTheGame() {
   for (let i = 0; i < maxCars; i++) {
     cars.push(new Car());
   }
+
 
 }
 
@@ -205,4 +225,9 @@ class Car {
 
   }
 
+}
+
+
+function touchStarted() {
+  getAudioContext().resume();
 }

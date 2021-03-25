@@ -57,7 +57,7 @@ function draw() {
       image(img4, 0, 0, 500, 500);
       fill("white");
       text("Click to Start!", 80, 400);
-      textSize(16);
+      textSize(15);
       break;
 
     case 1:
@@ -74,7 +74,7 @@ function draw() {
       image(img3, 0, 0, 450, 400);
       fill("white");
       text("Click to restart!", 80, 400);
-      textSize(14);
+      textSize(15);
       break;
 
     case 3: //lose
@@ -82,7 +82,7 @@ function draw() {
       image(img2, 0, 0, 450, 400);
       fill("white");
       text("You lose!\nClick to try again!!", 80, 400);
-      textSize(14);
+      textSize(15);
       break;
 
   }

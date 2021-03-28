@@ -1,10 +1,10 @@
 let cars = [];
-var bgPic;
+let img;
 
 
 function setup() {
   createCanvas(500,500);
-  bgPic = loadImage("assets/bg.png");
+  img = loadImage("assets/bggalaxy.png");
 
 
 //for (let i = 0; i < 20; i++){

@@ -1,21 +1,33 @@
 let cars = [];
 let maxCars = 5;
-let maxTimer =  7 * 60;
+let maxTimer = 5 * 60;
 let timer = 0;
-let frogPos ;
+let frogPos;
 let img, img1, img2, img3, img4;
-let state = 0;
+let state = -1;
+let song1, song2, song3, song4;
 
 function preload() {
+  song1 = loadSound('assets/menu.mp3');
+  song2 = loadSound('assets/game.mp3');
+  song3 = loadSound('assets/win.mp3');
+  song4 = loadSound('assets/lose.mp3');
+
+
+
   img = loadImage('assets/aerospace.png');
   img1 = loadImage('assets/bg.png');
   img2 = loadImage('assets/lost.png');
   img3 = loadImage('assets/win1.png');
   img4 = loadImage('assets/menu.png');
+
+
 }
 
 function setup() {
   createCanvas(500, 500);
+
+
 
 
   // Spawn an object
@@ -24,19 +36,31 @@ function setup() {
     cars.push(new Car());
   }
 
-    frogPos = createVector(width/2, height-100);
+  frogPos = createVector(width / 2, height - 100);
 }
 
 function draw() {
 
   switch (state) {
-    case 0:
-    image(img1, 0, 0, 500, 500);
-    image(img4, 0, 0, 500, 500);
-    fill("white");
-    text("Click to Start!", 80, 400);
-    textSize(12);
+    case -2:
+    song3.play();
+    song2.pause();
+    state = 2;
+    break;
 
+
+    case -1:
+    song1.play() ;
+    song2.pause() ;
+    state = 0;
+    break;
+
+    case 0:
+      image(img1, 0, 0, 500, 500);
+      image(img4, 0, 0, 500, 500);
+      fill("white");
+      text("Click to Start!", 80, 400);
+      textSize(15);
       break;
 
     case 1:
@@ -49,42 +73,78 @@ function draw() {
       break;
 
     case 2: //win
-    image(img1, 0, 0, 500, 500);
-    image(img3, 0, 0, 450, 400);
-    fill("white");
-    text("Click to restart!", 80, 400);
-    textSize(12);
-    break;
+      image(img1, 0, 0, 500, 500);
+      image(img3, 0, 0, 450, 400);
+      fill("white");
+      text("Click to restart!", 80, 400);
+      textSize(15);
+      break;
 
     case 3: //lose
-    image(img1, 0, 0, 500, 500);
-    image(img2, 0, 0, 450, 400);
-    fill("white");
-    text("Click to try again!!", 80, 400);
-    textSize(12);
-    break;
+      image(img1, 0, 0, 500, 500);
+      image(img2, 0, 0, 450, 400);
+      fill("white");
+      text("You lose!\nClick to try again!!", 80, 400);
+      textSize(15);
+      break;
 
   }
 
 }
 
 function mouseReleased() {
-  switch(state) {
+  switch (state) {
+
+    case -2:
+    state = 2
+    song3.play();
+    song2.pause();
+    state = 2
+
+
+    case -1:
+    state = 0;
+    song1.pause();
+    song2.pause();
+    song3.play();
+    break;
+
+
     case 0:
-    state = 1 ;
+    state = 1;
+    song1.pause();
+    song2.loop();
+    state = 1;
+      break;
+
+    case 1:
+    state = 2;
+    song1.pause();
+    song2.loop();
+    state = 2;
     break;
 
     case 2: //they won and clocked to restart
-    resetTheGame();
-    state = 0;
-    break;
+      resetTheGame();
+      song2.pause();
+      song1.pause();
+      song3.loop();
+      state = -1;
+      break;
 
     case 3: //they lost clicked to restart
-    resetTheGame();
-    state = 0;
-    break;
+      resetTheGame();
+      state = 0;
+      song2.pause();
+      song1.loop();
+      break;
   }
 
+  //song1.pause();
+  //song2.pause();
+
+  //state++;
+  //if (state > 3) state = 0;
 }
 
 function resetTheGame() {
@@ -94,6 +154,7 @@ function resetTheGame() {
     cars.push(new Car());
   }
 
+
 }
 
 
@@ -101,7 +162,7 @@ function resetTheGame() {
 function game() {
 
   //background(0);
-image(img1, 0, 0, 500, 500);
+  image(img1, 0, 0, 500, 500);
 
   // do some actions on the object
   for (let i = 0; i < cars.length; i++) {
@@ -114,23 +175,23 @@ image(img1, 0, 0, 500, 500);
   }
 
   //check to see if array == 0
-  if (cars.length == 0){
-    state = 2 ;
+  if (cars.length == 0) {
+    state = 2;
 
   }
-//Here is my frog
-checkForKeys();
-//fill('green');
-//ellipse(frogPos.x, frogPos.y, 75, 75);
-//image(img, frogPos.x, frogPos.y, 150, 150);
-//noStroke();
- ellipse(frogPos.x, frogPos.y, 100, 40);
- fill('white');
- stroke(51,28,67);
- strokeWeight(2);
+  //Here is my frog
+  checkForKeys();
+  //fill('green');
+  //ellipse(frogPos.x, frogPos.y, 75, 75);
+  //image(img, frogPos.x, frogPos.y, 150, 150);
+  //noStroke();
+  ellipse(frogPos.x, frogPos.y, 100, 40);
+  fill('white');
+  stroke(51, 28, 67);
+  strokeWeight(2);
 
   ellipse(frogPos.x, frogPos.y, 30, 90);
- fill('white');
+  fill('white');
 }
 
 function checkForKeys() {
@@ -176,4 +237,9 @@ class Car {
 
   }
 
+}
+
+
+function touchStarted() {
+  getAudioContext().resume();
 }

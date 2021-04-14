@@ -13,8 +13,8 @@ function draw() {
 	fill(0) ;
 	textSize(12) ;
 	text("hello", 20, 20) ;
-    text(locationData.latitude, 40, 40) ;
-    text(locationData.longitude, 40, 60) ;
+    text("lat = " + locationData.latitude, 40, 40) ;
+    text("long = " + locationData.longitude, 40, 60) ;
     text(locationData.accuracy, 40, 80) ;
   text(locationData.altitude, 40, 100) ;
 

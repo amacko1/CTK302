@@ -35,7 +35,7 @@ function draw() {
 
   rotate(radians(alpha)); // rotate the bunny depending on the alpha intake
 
-  image(emojiImage, 0, 0, 1220, 1220);
+  image(emojiImage, 0, 0, 920, 920);
   // rect(0, 0, 100, 100) ;
   pop();
 
@@ -59,7 +59,7 @@ function draw() {
   // Text that makes CTK type in the background
   fill('black');
   noStroke();
-  textSize(60);
+  textSize(20);
   textAlign(LEFT);
   text(" Blaaah!", width / 4, height / 4);
 

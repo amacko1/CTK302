@@ -27,7 +27,7 @@ function draw() {
   // takes your variable and maps it from range 1 to range 2
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
   xPosition = map(gamma, -60, 60, 0, width);
-  yPosition = map(beta, -30, 30, 0, height);
+  yPosition = map(beta, -30, 90, 0, height);
 
   push(); // before you use translate, rotate, or scale commands, push and then pop after
 
@@ -56,7 +56,7 @@ function draw() {
   text("y = " + y.toFixed(2), 25, 170);
   text("z = " + z.toFixed(4), 25, 190);
 
-  // Text that makes CTK type in the background
+  // Text "Blaaaah"
   fill('red');
   noStroke();
   textSize(80);

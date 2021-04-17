@@ -35,23 +35,23 @@ function draw() {
 
   rotate(radians(alpha)); // rotate the bunny depending on the alpha intake
 
-  image(emojiImage, 0, 0, 1520, 1520);
+  image(emojiImage, 0, 0, 1220, 1220);
   // rect(0, 0, 100, 100) ;
   pop();
 
 
   // Text commands that display debugging data
   textAlign(LEFT);
-  textSize(30);
+  textSize(20);
   fill('black');
   text("orientation data:", 25, 25);
-  textSize(20);
+  textSize(15);
   text("alpha: " + alpha, 25, 50);
   text("beta: " + beta, 25, 70);
   text("gamma: " + gamma, 25, 90);
-  textSize(30);
-  text("acceleration data:", 25, 125);
   textSize(20);
+  text("acceleration data:", 25, 125);
+  textSize(15);
   text("x = " + x.toFixed(2), 25, 150); // .toFixed means just show (x) decimal places
   text("y = " + y.toFixed(2), 25, 170);
   text("z = " + z.toFixed(4), 25, 190);
@@ -59,9 +59,9 @@ function draw() {
   // Text that makes CTK type in the background
   fill('black');
   noStroke();
-  textSize(100);
+  textSize(60);
   textAlign(LEFT);
-  text(" Blaaah!", width / 5, height / 5);
+  text(" Blaaah!", width / 4, height / 4);
 
 }
 

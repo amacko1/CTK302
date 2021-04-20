@@ -83,9 +83,9 @@ class Bubble {
   // noStroke();
   if (this.test == 'Positive') {
     //text(“Positive", this.pos.x, this.pos.y) ;
-    image(img2, this.pos.x, this.pos.y, 290, 250);
+    image(img2, this.pos.x, this.pos.y, 300, 270);
   } else {
-    image(img1, this.pos.x, this.pos.y, 290, 250);
+    image(img1, this.pos.x, this.pos.y, 300, 270);
   }
 
   textSize(14);
